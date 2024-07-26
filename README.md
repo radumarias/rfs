@@ -2,7 +2,7 @@
 
 Distributed filesystem written in Rust.
 
----
+# Introduction
 
 I started to learn **Rust** few months back and decided to choose an interesting project as a learning one to keep me motivated. I chosen an **encrypted filesystem**, more like a way to build vaults as encrypted directories.
 
@@ -10,7 +10,7 @@ Idea originated from the fact that I had a personal directory with some info abo
 
 From the learning project it evolved into something more and soon ready for a stable version with many interesting features. You can view more about the project [here](https://github.com/radumarias/rencfs)
 
----
+# Bigger idea
 
 Then a bigger idea arose, it would be very interesting to build a **distributed filesystem**. I imaged it to be something like **Hadoop** filesystem or **S3**. I have some experience with both. Armed with experience in creating a filesystem with **FUSE** from the previous project and with curiosity on what it would mean to create from scratch a distributed filesystem, masters election, **sharding, replication, synchronization**… I started to gather reading materials to get the basics on how to build it.
 
@@ -47,8 +47,6 @@ And ended up with this, quite big, list of links that I would need to read and o
 - https://github.com/J-Schoepplenberg/zero-packet
 - merkle tree
 - https://www.libristo.ro/ro/carte/designing-data-intensive-applications_09060481
-
----
 
 # I knew some basic concepts on how distributed systems works
 
