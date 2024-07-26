@@ -1,6 +1,6 @@
 # rfs
 
-Distributed filesystem written in Rust.
+Distributed filesystem written in Rust. Intention is to be a learning projects for the concepts involved in such a system.
 
 # Introduction
 
