@@ -2,6 +2,10 @@
 
 Distributed filesystem written in Rust. Intention is to be a learning projects for the concepts involved in such a system.
 
+# Blog
+
+There will be a [series of articles](https://medium.com/@xorio42/list/317d40f38304) writing about the evolution of this project trying to keep it like a tutorial. This is the [first one](https://systemweakness.com/hitchhikers-guide-to-building-a-distributed-filesystem-in-rust-the-very-beginning-2c02eb7313e7).
+
 # Introduction
 
 I started to learn **Rust** few months back and decided to choose an interesting project as a learning one to keep me motivated. I chosen an **encrypted filesystem**, more like a way to build vaults as encrypted directories.
