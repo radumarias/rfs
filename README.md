@@ -17,13 +17,22 @@ Then a bigger idea arose, it would be very interesting to build a **distributed 
 And ended up with this, quite big, list of links that I would need to read and organize to grasp insights for this challenging task:
 
 - https://medium.com/@patrickkoss/dont-build-a-distributed-system-if-you-don-t-understand-these-issues-2ae5d60bdad7
+- https://github.com/spacedriveapp/spacedrive#what-is-a-vdfs]- https://www.cncf.io/blog/2019/11/04/building-a-large-scale-distributed-storage-system-based-on-raft/
+- https://github.com/CodisLabs/codis
+- https://en.wikipedia.org/wiki/CAP_theorem
+- https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction
+- https://www.datomic.com/
+- https://suman-cshil.medium.com/paxos-introduction-74d074166fc4
+- https://suman-cshil.medium.com/paxos-continued-basic-paxos-ce723cf0f970
+- https://suman-cshil.medium.com/observability-is-an-afterthought-it-should-not-be-45d2e5824250
+- https://medium.com/@patrickkoss/dont-build-a-distributed-system-if-you-don-t-understand-these-issues-2ae5d60bdad7
 - https://github.com/spacedriveapp/spacedrive#what-is-a-vdfs
 - quic have UDP flow control
 - UDP DCCP(Datagram Congestion Control Protocol). The RFC 6773
 - https://crates.io/crates/dccp
 - checksum for each chunk 
 - https://github.com/tikv/raft-rs
-- https://en.m.wikipedia.org/wiki/Clustered_file_system#Distributed_file_systems
+https://en.m.wikipedia.org/wiki/Clustered_file_system#Distributed_file_systems
 - https://github.com/cholcombe973/rusix/
 - https://github.com/datenlord/async-rdma
 - https://crates.io/crates/rdma
