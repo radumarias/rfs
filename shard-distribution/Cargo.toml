@@ -1,0 +1,16 @@
+[package]
+name = "shard-distribution"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sha2 = { workspace = true }
+hex = { workspace = true }
+criterion = { workspace = true }
+rand = { workspace = true }
+num-bigint = { workspace = true }
+num-traits = { workspace = true }
+
+[[bench]]
+name = "consistent_hashing"
+harness = false
