@@ -1,0 +1,23 @@
+[package]
+name = "rfs"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [
+    "shard-distribution",
+]
+
+[workspace.dependencies]
+sha2 = "0.10"
+hex = "0.4.3"
+criterion = "0.5.1"
+rand = "0.8.5"
+num-bigint = "0.4"
+num-traits = "0.2"
+
+[dev-dependencies]
+criterion = { version = "^0.5.1", features = ["html_reports"] }
+
+[profile.release]
+panic = "abort"
