@@ -20,6 +20,7 @@ Then a bigger idea arose, it would be very interesting to build a **distributed 
 
 And ended up with this, quite big, list of links that I would need to read and organize to grasp insights for this challenging task:
 
+- https://www.youtube.com/watch?v=7VbL89mKK3M&list=PLOE1GTZ5ouRPbpTnrZ3Wqjamfwn_Q5Y9A&index=1
 - https://blog.bytebytego.com/p/design-a-s3-like-storage-system
 - https://medium.com/@patrickkoss/dont-build-a-distributed-system-if-you-don-t-understand-these-issues-2ae5d60bdad7
 - https://github.com/spacedriveapp/spacedrive#what-is-a-vdfs]- https://www.cncf.io/blog/2019/11/04/building-a-large-scale-distributed-storage-system-based-on-raft/
