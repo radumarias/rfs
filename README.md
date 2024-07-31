@@ -38,7 +38,7 @@ And ended up with this, quite big, list of links that I would need to read and o
 - https://crates.io/crates/dccp
 - checksum for each chunk 
 - https://github.com/tikv/raft-rs
-https://en.m.wikipedia.org/wiki/Clustered_file_system#Distributed_file_systems
+- https://en.m.wikipedia.org/wiki/Clustered_file_system#Distributed_file_systems
 - https://github.com/cholcombe973/rusix/
 - https://github.com/datenlord/async-rdma
 - https://crates.io/crates/rdma
