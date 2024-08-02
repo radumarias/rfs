@@ -1,9 +1,7 @@
-[package]
-name = "rfs"
-version = "0.1.0"
-edition = "2021"
-
 [workspace]
+
+resolver = "2"
+
 members = [
     "shard-distribution",
 ]
@@ -15,9 +13,7 @@ criterion = "0.5.1"
 rand = "0.8.5"
 num-bigint = "0.4"
 num-traits = "0.2"
-
-[dev-dependencies]
-criterion = { version = "^0.5.1", features = ["html_reports"] }
+blake3 = "1.5.3"
 
 [profile.release]
 panic = "abort"

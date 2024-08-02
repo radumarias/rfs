@@ -1,6 +1,13 @@
 [package]
 name = "shard-distribution"
 version = "0.1.0"
+description = "A library for sharding distribution of file chunks"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/radumarias/rfs"
+readme = "README.md"
+authors = ["Radu Marias <radumarias@gmail.com>, Bnchi Fahmi <bnchifahmi@gmail.com>"]
+keywords = ["sharding", "files", "distribution", "consistent-hashing", "parition-by-range"]
+categories = ["cryptography", "filesystem"]
 edition = "2021"
 
 [dependencies]
@@ -10,6 +17,10 @@ criterion = { workspace = true }
 rand = { workspace = true }
 num-bigint = { workspace = true }
 num-traits = { workspace = true }
+blake3 = { workspace = true }
+
+[dev-dependencies]
+criterion = { version = "^0.5.1", features = ["html_reports"] }
 
 [[bench]]
 name = "consistent_hashing"

@@ -16,4 +16,5 @@
 #![allow(clippy::redundant_closure)]
 #![allow(clippy::missing_errors_doc)]
 pub mod consistent_hashing;
+pub mod hash;
 pub mod shard_distribution;
