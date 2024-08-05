@@ -39,7 +39,7 @@ mod tests {
     use crate::shard_distribution::ShardDistribution;
 
     #[test]
-    fn shard_distribution() {
+    fn basic() {
         let nodes: HashMap<String, f64> = vec![
             ("node1".to_string(), 15_f64),
             ("node2".to_string(), 25_f64),
