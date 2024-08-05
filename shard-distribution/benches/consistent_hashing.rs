@@ -19,7 +19,7 @@ fn consistent_hashing(c: &mut Criterion) {
     let mut hasher = ConsistentHashing::new(nodes, 5);
     c.bench_function("get_nodes", |b| {
         b.iter(|| {
-            let nodes = hasher.get_nodes(
+            let nodes = hasher.distribute(
                 format!("key{}", thread_rng().gen_range(0..10_000)),
                 Some(10),
                 Some(10_f64),

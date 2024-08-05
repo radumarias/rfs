@@ -3,6 +3,8 @@ name = "rfs"
 version = "0.1.0"
 edition = "2021"
 
+resolver = "2"
+
 [workspace]
 members = [
     "shard-distribution",
@@ -15,6 +17,7 @@ criterion = "0.5.1"
 rand = "0.8.5"
 num-bigint = "0.4"
 num-traits = "0.2"
+blake3 = "1.5.3"
 
 [dev-dependencies]
 criterion = { version = "^0.5.1", features = ["html_reports"] }
