@@ -21,4 +21,4 @@ If you build something interesting and feel like sharing pull requests are alway
 
 ## How to contribute
 
-Please see [CONTRIBUTING.md](https://github.com/radumarias/rencfs/blob/main/CONTRIBUTING.md).
+Please see [CONTRIBUTING.md](CONTRIBUTING.md).
