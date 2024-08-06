@@ -12,7 +12,7 @@ There will be a [series](https://medium.com/@xorio42/list/317d40f38304) of artic
 
 # Wiki
 
-There is also a [wiki](https://github.com/radumarias/rfs/wiki) for docs.
+There is also a [wiki](https://github.com/radumarias/rfs/wiki) for docs and ideas.
 
 # Introduction
 
