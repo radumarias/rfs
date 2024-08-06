@@ -16,7 +16,7 @@ There is also a [wiki](https://github.com/radumarias/rfs/wiki) for docs and idea
 
 # Introduction
 
-I started learning **Rust** few months back and decided to choose an interesting project as a learning one to keep me motivated. I chosen an **encrypted filesystem**, more like a way to build vaults as encrypted directories.
+I started learning **Rust** in March 2024 and decided to choose an interesting project as a learning one to keep me motivated. I chosen an **encrypted filesystem**, more like a way to build vaults as encrypted directories.
 
 Idea originated from the fact that I had a personal directory with some info about work projects, partially private info, not credentials, those I keep in **KeePassXC**. That directory I then synced with **Resilio** between multiple devices. But I thought how about using **Google Drive** or **Dropbox**, but hey there is private info in there, not ok for them to have access to it. So a solution like encrypted directories, keeping the privacy, was appealing. So I decided to build one. This would be a great learning experience after all. And it was indeed.
 
