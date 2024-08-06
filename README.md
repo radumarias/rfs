@@ -163,3 +163,12 @@ Logs              | Grafana Loki
 ```
 
 Let the journey begin. To be continued…
+
+# Contribute
+
+Feel free to fork it, change and use it in any way that you want.
+If you build something interesting and feel like sharing pull requests are always appreciated.
+
+## How to contribute
+
+Please see [CONTRIBUTING.md](https://github.com/radumarias/rencfs/blob/main/CONTRIBUTING.md).
