@@ -4,7 +4,7 @@ Distributed filesystem written in Rust. The intention is to be a learning projec
 
 # A short story
 
-[The Hitchhiker's Guide to Building a Distributed Filesystem in Rust The_beginning](The_Hitchhiker_s_Guide_to_Building_a_Distributed_Filesystem_in_Rust__The_beginning.pdf).
+[The Hitchhiker's Guide to Building a Distributed Filesystem in Rust The_beginning](The_Hitchhiker_s_Guide_to_Building_a_Distributed_Filesystem_in_Rust__The_beginning.pdf)
 
 # Blog
 
