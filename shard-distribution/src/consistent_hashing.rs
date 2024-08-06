@@ -140,7 +140,8 @@ type Ring = (
 );
 
 /// Build the ring by adding several virtual nodes to get a more uniform distribution.
-fn build_ring(nodes: Vec<String>, replicas: u16) -> Ring {
+#[must_use]
+pub fn build_ring(nodes: Vec<String>, replicas: u16) -> Ring {
     let mut ring = vec![];
     let mut node_hash_to_id = BTreeMap::new();
     let mut node_id_to_hashes: BTreeMap<String, HashSet<u64>> = BTreeMap::new();
@@ -186,8 +187,8 @@ mod tests {
             ("node4".to_string(), 35_f64),
             ("node5".to_string(), 42_f64),
         ]
-            .into_iter()
-            .collect();
+        .into_iter()
+        .collect();
         let mut hasher = ConsistentHashing::new(nodes, 5);
         let nodes = hasher.distribute("key1".to_string(), Some(3), Some(10_f64));
         let mut nodes = nodes.iter().cloned().collect::<Vec<String>>();

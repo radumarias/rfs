@@ -13,14 +13,14 @@ fn consistent_hashing(c: &mut Criterion) {
     }
     let nodes: HashMap<String, f64> = nodes.into_iter().collect();
     c.bench_function("create", |b| {
-        b.iter(|| black_box(ConsistentHashing::new(nodes.clone(), 5)))
+        b.iter(|| black_box(ConsistentHashing::new(nodes.clone(), 50)))
     });
 
-    let mut hasher = ConsistentHashing::new(nodes, 5);
-    c.bench_function("get_nodes", |b| {
+    let mut hasher = ConsistentHashing::new(nodes, 50);
+    c.bench_function("distribute", |b| {
         b.iter(|| {
             let nodes = hasher.distribute(
-                format!("key{}", thread_rng().gen_range(0..10_000)),
+                format!("key{}", thread_rng().gen_range(0..1_000_000)),
                 Some(10),
                 Some(10_f64),
             );

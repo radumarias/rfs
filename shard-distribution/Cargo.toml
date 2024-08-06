@@ -1,6 +1,7 @@
 [package]
 name = "shard-distribution"
 version = "0.1.0"
+edition = "2021"
 description = "A library for sharding distribution of file chunks"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/radumarias/rfs"
@@ -8,7 +9,7 @@ readme = "README.md"
 authors = ["Radu Marias <radumarias@gmail.com>, Bnchi Fahmi <bnchifahmi@gmail.com>"]
 keywords = ["sharding", "files", "distribution", "consistent-hashing", "parition-by-range"]
 categories = ["cryptography", "filesystem"]
-edition = "2021"
+exclude = [".github/"]
 
 [dependencies]
 sha2 = { workspace = true }

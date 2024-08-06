@@ -1,14 +1,20 @@
-[package]
-name = "rfs"
-version = "0.1.0"
-edition = "2021"
-
-resolver = "2"
-
 [workspace]
 members = [
     "shard-distribution",
 ]
+
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+description = "A library for sharding distribution of file chunks"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/radumarias/rfs"
+readme = "README.md"
+authors = ["Radu Marias <radumarias@gmail.com>, Bnchi Fahmi <bnchifahmi@gmail.com>"]
+keywords = ["sharding", "files", "distribution", "consistent-hashing", "parition-by-range"]
+categories = ["cryptography", "filesystem"]
+exclude = [".github/"]
 
 [workspace.dependencies]
 sha2 = "0.10"
@@ -18,9 +24,6 @@ rand = "0.8.5"
 num-bigint = "0.4"
 num-traits = "0.2"
 blake3 = "1.5.3"
-
-[dev-dependencies]
-criterion = { version = "^0.5.1", features = ["html_reports"] }
 
 [profile.release]
 panic = "abort"
