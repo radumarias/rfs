@@ -10,7 +10,7 @@ Distributed filesystem written in Rust. The intention is to be a learning and ex
 
 There will be a [series](https://medium.com/@xorio42/list/317d40f38304) of articles about the evolution of this project trying to keep it like a tutorial. This is the [first one](https://systemweakness.com/hitchhikers-guide-to-building-a-distributed-filesystem-in-rust-the-very-beginning-2c02eb7313e7).
 
-# [Motivation]((https://github.com/radumarias/rfs/wiki/Motivation) and [the big picture](https://github.com/radumarias/rfs/wiki/The-big-picture)
+# [Motivation](https://github.com/radumarias/rfs/wiki/Motivation) and [the big picture](https://github.com/radumarias/rfs/wiki/The-big-picture)
 
 # Wiki
 
