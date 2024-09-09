@@ -3,7 +3,7 @@
 Distributed filesystem written in Rust. The intention is to be a learning and experimental project for the concepts involved in building such a system.
 
 > [!WARNING]  
-> This is still under development. Please do not use it with sensitive data for now, please wait for a
+> **This is still under development. Please do not use it with sensitive data for now, please wait for a
 stable release.  
 > It's mostly ideal for experimental and learning projects.**
 
