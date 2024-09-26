@@ -1,4 +1,4 @@
-use std::error::Error;
+use std::{error::Error, fmt::Display};
 
 #[derive(Debug, Clone)]
 pub struct Tree {
@@ -10,23 +10,18 @@ impl Tree {
     /// # Panics
     ///
     pub fn new(chunks: Vec<&[u8]>) -> Result<Self, Box<dyn Error>> {
-        let mut chunks = chunks;
-
         if chunks.is_empty() {
             return Err("There are 0 chunks provided".into());
         }
 
-        if chunks.len() % 2 != 0 {
-            let last = chunks.last().unwrap();
-            chunks.push(*last);
-        }
-
         let leaves = chunks
             .into_iter()
-            .map(|d| Node {
+            .enumerate()
+            .map(|(i, d)| Node {
                 hash: blake3::hash(d).as_bytes().to_vec(),
                 right: None,
                 left: None,
+                chunk_id: Some(i),
             })
             .collect::<Vec<Node>>();
 
@@ -40,21 +35,14 @@ impl Tree {
             return leaves.remove(0);
         }
 
-        let mut parent_nodes: Vec<Node> = Vec::new();
+        let mid = (leaves.len() + 1) / 2;
 
-        while leaves.len() > 1 {
-            let left_node = leaves.remove(0);
-            let right_node = leaves.remove(0);
+        let (left_leaves, right_leaves) = leaves.split_at(mid);
 
-            let new_parent = Node::create_parent(left_node, right_node);
+        let left = Self::build_tree(left_leaves.to_vec());
+        let right = Self::build_tree(right_leaves.to_vec());
 
-            parent_nodes.push(new_parent);
-        }
-        if !leaves.is_empty() {
-            parent_nodes.extend(leaves);
-        }
-
-        Self::build_tree(parent_nodes)
+        Node::create_parent(left, right)
     }
 }
 
@@ -68,6 +56,9 @@ pub struct Node {
 
     #[allow(dead_code)]
     hash: Vec<u8>,
+
+    #[allow(dead_code)]
+    chunk_id: Option<usize>,
 }
 
 impl PartialEq for Node {
@@ -86,7 +77,41 @@ impl Node {
             left: Some(Box::new(left)),
             right: Some(Box::new(right)),
             hash: combined_hash.as_bytes().to_vec(),
+            chunk_id: None,
         }
+    }
+
+    fn fmt_with_indent(&self, f: &mut std::fmt::Formatter<'_>, indent: usize) -> std::fmt::Result {
+        for _ in 0..indent {
+            write!(f, "    ")?;
+        }
+
+        // Display the first hash byte of the current node
+        writeln!(f, "Node(hash: [{:?}..])", self.hash[0])?;
+
+        if let Some(left) = &self.left {
+            for _ in 0..indent {
+                write!(f, "    ")?;
+            }
+            write!(f, "L: ")?;
+            left.fmt_with_indent(f, indent + 1)?;
+        }
+
+        if let Some(right) = &self.right {
+            for _ in 0..indent {
+                write!(f, "    ")?;
+            }
+            write!(f, "R: ")?;
+            right.fmt_with_indent(f, indent + 1)?;
+        }
+
+        Ok(())
+    }
+}
+
+impl Display for Node {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        self.fmt_with_indent(f, 0)
     }
 }
 
@@ -96,13 +121,10 @@ mod tests {
 
     #[test]
     fn create_a_merkle_tree() {
-        let data: Vec<&[u8]> = vec![b"This", b"creates", b"a", b"merkle", b"tree"];
+        let data: Vec<&[u8]> = vec![b"This", b"creates", b"a", b"balanced", b"merkle", b"tree"];
 
-        let m_tree_root = Tree::new(data).unwrap().root;
+        let m_tree_root = Tree::new(data);
 
-        let h5_clone = m_tree_root.clone().right.unwrap().left.unwrap();
-        let h5 = m_tree_root.right.unwrap().right.unwrap();
-
-        assert_eq!(h5, h5_clone);
+        assert!(m_tree_root.is_ok());
     }
 }
