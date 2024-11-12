@@ -24,7 +24,7 @@ There is also a [wiki](https://github.com/radumarias/rfs/wiki) for docs and idea
 # Key features
 
 - Masterless
-- BitTorrent with QUOC as transport and zero-copy for synching files
+- BitTorrent with QUIC as transport and zero-copy for synching files
 - Sync only changes by diff with Merkle tree
 - Client Libs for various languages
 - REST API and gRPC access for clients
