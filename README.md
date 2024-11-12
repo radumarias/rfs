@@ -21,6 +21,21 @@ There will be a [series](https://medium.com/@xorio42/list/317d40f38304) of artic
 
 There is also a [wiki](https://github.com/radumarias/rfs/wiki) for docs and ideas.
 
+# Key features
+
+- Masterless
+- BitTorrent with QUOC as transport and zero-copy for synching files
+- Sync only changes by diff with Merkle tree
+- Client Libs for various languages
+- REST API and gRPC access for clients
+- Exposed wuth FUSE and NFS
+- ACLs and authentication
+- Data corruption protection with error correcting codes
+- Search and analytics
+- Snapshots and versioning
+- Protection agains Byzantine failures and other failures
+- Xan ve deployed on cluster on On-Prem
+
 # Contribute
 
 Feel free to fork it, change and use it in any way that you want.
